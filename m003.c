@@ -30,14 +30,14 @@ x = 0;
      {
          r = a%i;
             if (r == 0)
-                x = x + 1;
+                {x = x + 1;}
             else
-                x = x;
+                {x = x;}
      }
-     if (x > 1)
-        y = 0;
-     else
-        y = 1;
+if (x > 1)
+  {y = 0;}
+else
+  {y = 1;}
 
   return y;
 }
