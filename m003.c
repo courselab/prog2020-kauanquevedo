@@ -26,23 +26,19 @@ int is_prime (int a)
  int cont;          /*Contar quantas restos deram 0.*/
  int primo;         /*Verificar se é primo ou não. */
  int i, resto;  
- if (a == 1)
-    {primo = 0;}
     
-  else 
-  {  
-     cont = 0;
-     for (i = a ; i > 1; i--)
-     {
-         resto = a%i;
-            if (resto == 0)
-                {cont = cont + 1;}
+  cont = 0;
+  for (i = a ; i > 0; i--)
+    {
+      resto = a%i;
+        if (resto == 0)
+           {cont = cont + 1;}
      }
-     if (cont > 1)           
-     {primo = 0;}
-     else
+     if (cont == 2)           
      {primo = 1;}
-  }
+     else
+     {primo = 0;}
+  
 
   return primo;
 }
