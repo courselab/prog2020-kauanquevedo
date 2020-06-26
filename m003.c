@@ -26,7 +26,7 @@ int is_prime (int a)
 int x, y, i, r;  
 x = 0;
 
-     for (i = (a - 1) ; i > 1; i--)
+     for (i = a ; i > 1; i--)
      {
          r = a%i;
             if (r == 0)
@@ -34,7 +34,7 @@ x = 0;
             else
                 x = x;
      }
-     if (x > 0)
+     if (x > 1)
         y = 0;
      else
         y = 1;
