@@ -23,21 +23,28 @@
 
 int is_prime (int a)
 {
-int x, y, i, r;  
-x = 0;
-
+ int cont;          /*Contar quantas restos deram 0.*/
+ int primo;         /*Verificar se é primo ou não. */
+ int i, resto;  
+ if (a == 1)
+    {primo = 0;}
+    
+  else 
+  {  
+     cont = 0;
      for (i = a ; i > 1; i--)
      {
-         r = a%i;
-            if (r == 0)
-                {x = x + 1;}
+         resto = a%i;
+            if (resto == 0)
+                {cont = cont + 1;}
      }
-if (x > 1)
-  {y = 0;}
-else
-  {y = 1;}
+     if (cont > 1)           
+     {primo = 0;}
+     else
+     {primo = 1;}
+  }
 
-  return y;
+  return primo;
 }
 
 #define USAGE "m003 <num>\n"
