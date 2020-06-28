@@ -49,12 +49,16 @@ int decimal (char *b)
             p = (b[i]);
          if(p == '1')
          { 
+           pot = 1;
            v = tams - 1 - i;
             while (v != 0)
             {
               pot = pot*2;
-              v = v - 1;
-            }
+              v--;
+            }/* 110: tam = 3; i = 2 => dec = 0
+                i = 1 => pot = 2 => dec = 2
+                i = 0 => pot = 2 + 4 
+              */
 
           dec = dec + pot;  
          }
