@@ -26,19 +26,19 @@
 void sort (int* vector, int n)
 {
   int i, j;
-  int k[n];
+  int k;
 
   
 
-  for (i = 0; i <= n; i++)
+  for (i = 1; i < n; i++)
   {
-    for (j = 0; j <= n; j++)
+    for (j = 0; j < n - 1; j++)
     {
-      if (vector[i] <= vector [j])
+      if ((vector[i]) < (vector [j]))
         {
-        k[0] = vector[i]; 
-        vector[i] = vector [j];
-        vector[j] = k[0];
+        k = vector[i]; 
+        vector[i] = vector[j];
+        vector[j] = k;
         }
     }
   }
