@@ -22,6 +22,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #define MAX 256
 
@@ -29,7 +30,63 @@
    form into LAST-first-middle form. */
 
 void lastname (char *s)
-{
+{ 
+  char t[MAX];
+  int i, j, k, l, m, n, o, p, q;
+  int count1;
+  int count2;
+  int TAM;
+  count1 = 0;
+  count2 = 0;
+  k = 0;
+  l = 0;
+  n = 0;
+  p = 0;
+
+
+  strcpy (t, s);
+  TAM = strlen(t);
+  
+  
+ for (i = 0; i <= MAX; i++)
+      {  
+          k = (t[i]);
+          if (k == ' ' )   
+              count1 = i;
+      } 
+  for(j = count1 + 1; j <= MAX ; j++)
+  {
+    s[l] = (t[j] - 32) ;    /* colocar o -32*/
+    l++;        
+  }
+
+  for (m = 0; m <= MAX; m++)         
+    { 
+        n = (t[m]);
+        if (n == ' '){
+          count2 = m;
+        break;}
+    }  
+  q = (TAM - 1 - count1 -1);
+  (s[q]) = ',';
+  (s[q + 1]) = ' ';
+
+  for(o = count2 + 2; o < count1 ; o++)
+  {
+    s[o] = (t[p]) ;
+    p++;
+
+  }
+
+
+
+
+  /*printf("%s %d", s, q);*/
+
+
+
+  
+
 }
 
 
