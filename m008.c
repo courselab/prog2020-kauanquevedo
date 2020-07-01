@@ -32,7 +32,7 @@
 void lastname (char *s)
 { 
   char t[MAX];
-  int i, j, k, l, m, n, o, p, q;
+  int i, j, k, l, m, n, o, p, q, r;
   int count1;
   int count2;
   int TAM;
@@ -56,10 +56,22 @@ void lastname (char *s)
       } 
   for(j = count1 + 1; j <= MAX ; j++)
   {
-    s[l] = (t[j] - 32) ;    /* colocar o -32*/
-    l++;        
+    if ((t[j] >= 'A') && (t[j] <= 'Z'))
+    {
+    s[l] = (t[j]) ;    
+    l++;
+    }else
+    {
+      s[l] = (t[j - 32]) ;    
+      l++;
+
+    }         
   }
 
+  q = (TAM - 1 - count1 -1);
+  (s[q]) = ',';
+  (s[q + 1]) = ' ';
+  
   for (m = 0; m <= MAX; m++)         
     { 
         n = (t[m]);
@@ -67,13 +79,11 @@ void lastname (char *s)
           count2 = m;
         break;}
     }  
-  q = (TAM - 1 - count1 -1);
-  (s[q]) = ',';
-  (s[q + 1]) = ' ';
 
-  for(o = count2 + 2; o < count1 ; o++)
+  for(o = (count2 + 1); o < count1 ; o++)
   {
-    s[o] = (t[p]) ;
+    s[o] = t[p] ;
+    
     p++;
 
   }
@@ -81,7 +91,7 @@ void lastname (char *s)
 
 
 
-  /*printf("%s %d", s, q);*/
+  printf("%d\n", (count2+2));
 
 
 
