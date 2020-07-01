@@ -62,7 +62,7 @@ void lastname (char *s)
     l++;
     }else
     {
-      s[l] = (t[j - 32]) ;    
+      s[l] = (t[j] - 32) ;    
       l++;
 
     }         
