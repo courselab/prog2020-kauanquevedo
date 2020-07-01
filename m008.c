@@ -35,7 +35,7 @@ void lastname (char *s)
   int i, j, k, l, m, n, o, p, q, r;
   int count1;
   int count2;
-  int TAM;
+  int TAM1, TAM2;
   count1 = 0;
   count2 = 0;
   k = 0;
@@ -45,7 +45,7 @@ void lastname (char *s)
 
 
   strcpy (t, s);
-  TAM = strlen(t);
+  TAM1 = strlen(t);
   
   
  for (i = 0; i <= MAX; i++)
@@ -68,7 +68,7 @@ void lastname (char *s)
     }         
   }
 
-  q = (TAM - 1 - count1 -1);
+  q = (TAM1 - 1 - count1 -1);
   (s[q]) = ',';
   (s[q + 1]) = ' ';
   
@@ -79,23 +79,18 @@ void lastname (char *s)
           count2 = m;
         break;}
     }  
+  s[count2 + 1] = '\0';  
+  t[count1 + 1] = '\0';
+  strcat (s, t); 
 
-  for(o = (count2 + 1); o < count1 ; o++)
+  /*for(o = (count2 + 1); o < count1 ; o++)
   {
     s[o] = t[p] ;
     
     p++;
-
   }
-
-
-
-
-  
-
-
-
-  
+  TAM2 = strlen(s);
+  s[TAM2 + 1] = '\0';*/
 
 }
 
