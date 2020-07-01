@@ -91,7 +91,7 @@ void lastname (char *s)
 
 
 
-  printf("%d\n", (count2+2));
+  
 
 
 
