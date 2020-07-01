@@ -47,13 +47,17 @@ void lastname (char *s)
   strcpy (t, s);
   TAM1 = strlen(t);
   
-  
+ /*Determinar posição do último espaço.*/ 
+
  for (i = 0; i <= MAX; i++)
       {  
           k = (t[i]);
           if (k == ' ' )   
               count1 = i;
       } 
+  
+  /*Armagenamento na string s do sobrenome nas primeiras posições. Já é realizado o teste para colocar todas as letras na forma maíscula*/
+
   for(j = count1 + 1; j <= MAX ; j++)
   {
     if ((t[j] >= 'A') && (t[j] <= 'Z'))
@@ -67,14 +71,16 @@ void lastname (char *s)
 
     }         
   }
+  /*A variável q determina o tamanho do sobrenome e depois coloco a ',' e o espaço na string s.*/
 
   q = (TAM1 - 1 - count1 -1);
   (s[q]) = ',';
   (s[q + 1]) = ' ';
   
+  
   for (m = 0; m <= MAX; m++)         
     { 
-        n = (t[m]);
+        n = (s[m]);
         if (n == ' '){
           count2 = m;
         break;}
