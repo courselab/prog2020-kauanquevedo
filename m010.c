@@ -30,7 +30,24 @@ enum {sun, mon, tue, wed, thu, fri, sat};
 
 int day_of_week (int day, int month)
 {
-  return sun;
+  int v[13];
+  int td;
+  int i;
+  int sem;
+
+  td = 0;
+
+  v[0] = 0; v[1] = 31; v[2] = 29; v[3] = 31; v[4] = 30;
+  v[5] = 31; v[6] = 30; v[7] = 31; v[8] = 31; v[9] = 30;
+  v[10] = 31; v[11] = 30; v[12] = 31; v[13] = '\0';
+
+  for (i = 0; i != month; i++)
+      {td = td + v[i];}
+  td = td + day;
+  
+  sem = (td + 2) % 7;
+ 
+  return sem;
 }
 
 /* Do not edit function main. */
