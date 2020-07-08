@@ -32,7 +32,7 @@
 void lastname (char *s)
 { 
   char t[MAX];
-  int i, j, k, l, m, n, o, p, q, r;
+  int i, j, k, l, m, n, q;
   int count1;
   int count2;
   int TAM1, TAM2;
@@ -41,7 +41,7 @@ void lastname (char *s)
   k = 0;
   l = 0;
   n = 0;
-  p = 0;
+  
 
 
   strcpy (t, s);
